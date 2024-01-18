@@ -37,6 +37,8 @@
             button1 = new Button();
             button2 = new Button();
             button3 = new Button();
+            dataGridView1 = new DataGridView();
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).BeginInit();
             SuspendLayout();
             // 
             // label1
@@ -113,6 +115,7 @@
             button2.TabIndex = 7;
             button2.Text = "UPDATE";
             button2.UseVisualStyleBackColor = true;
+            button2.Click += button2_Click;
             // 
             // button3
             // 
@@ -123,12 +126,27 @@
             button3.TabIndex = 8;
             button3.Text = "DELETE";
             button3.UseVisualStyleBackColor = true;
+            button3.Click += button3_Click;
+            // 
+            // dataGridView1
+            // 
+            dataGridView1.BackgroundColor = SystemColors.ButtonHighlight;
+            dataGridView1.ColumnHeadersHeightSizeMode = DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            dataGridView1.GridColor = SystemColors.Control;
+            dataGridView1.Location = new Point(12, 72);
+            dataGridView1.Name = "dataGridView1";
+            dataGridView1.RowTemplate.Height = 25;
+            dataGridView1.Size = new Size(373, 286);
+            dataGridView1.TabIndex = 9;
+            dataGridView1.CellClick += dataGridView1_CellClick;
+            
             // 
             // Form1
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(800, 450);
+            Controls.Add(dataGridView1);
             Controls.Add(button3);
             Controls.Add(button2);
             Controls.Add(button1);
@@ -140,6 +158,7 @@
             Controls.Add(label1);
             Name = "Form1";
             Text = "Form1";
+            ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -155,5 +174,6 @@
         private Button button1;
         private Button button2;
         private Button button3;
+        private DataGridView dataGridView1;
     }
 }
